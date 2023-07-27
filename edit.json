@@ -1,0 +1,441 @@
+[
+    { "path": "/search", "methods": ["GET"], "middlewares": ["anonymous"] },
+    { "path": "/query", "methods": ["GET"], "middlewares": ["anonymous"] },
+    { "path": "/count", "methods": ["GET"], "middlewares": ["anonymous"] },
+    { "path": "/movie", "methods": ["GET"], "middlewares": ["anonymous"] },
+    {
+        "path": "/movie/topRated",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/date",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/latest",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/slider",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/:id",
+        "methods": ["DELETE", "POST", "GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/add",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/createSeries/:id",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/updateSeries/:id/:seriesIndex",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/:id/:seriesIndex",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/search",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/genre",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/genre/list",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/ar",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/en",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/tur",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/hi",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/movie/sp",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    { "path": "/anime", "methods": ["GET"], "middlewares": ["anonymous"] },
+    {
+        "path": "/anime/noPG",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/search",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/:id",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/createAnime",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/anime/editAnime/:id",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/anime/createSeason/:id",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/anime/editSeason/:animeId/:seasonNumber",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/anime/deleteSeason/:animeId/:seasonNumber",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/createEpisode/:animeId/:seasonNumber",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/anime/editEpisode/:animeId/:seasonNumber/:episodeNumber",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/anime/deleteEpisode/:animeId/:seasonNumber/:episodeNumber",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/genre",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/action",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/shounen",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/comedy",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/drama",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/magic",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/fantasy",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/romance",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/horror",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/anime/school",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    { "path": "/manga", "methods": ["GET"], "middlewares": ["anonymous"] },
+    {
+        "path": "/manga/genre",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/manga/search",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/manga/:id",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/manga/createManga",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/manga/editManga/:id",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous", "anonymous"]
+    },
+    {
+        "path": "/manga/createVolume/:id",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/manga/editVolume/:mangaId/:volumeNumber",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/manga/deleteVolume/:mangaId/:volumeNumber",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/manga/createChapter/:mangaId/:volumeNumber",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/manga/editChapter/:mangaId/:volumeNumber/:ChapterNumber",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/manga/deleteChapter/:mangaId/:volumeNumber/:ChapterNumber",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    { "path": "/photos", "methods": ["GET"], "middlewares": ["anonymous"] },
+    {
+        "path": "/photos/search",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/photos/:id",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/photos/createPhoto",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/photos/editPhoto/:id",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    { "path": "/series", "methods": ["GET"], "middlewares": ["anonymous"] },
+    {
+        "path": "/series/search",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/:id",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/createSeries",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/series/editSeries/:id",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/series/createSeason/:id",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/editSeason/:seriesId/:seasonNumber",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/series/deleteSeason/:seriesId/:seasonNumber",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/createEpisode/:seriesId/:seasonNumber",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/series/editEpisode/:seriesId/:seasonNumber/:episodeNumber",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/series/deleteEpisode/:seriesId/:seasonNumber/:episodeNumber",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/genre",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/genre/list",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/ar",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/en",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/tur",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/hi",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/sp",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/series/k-drama",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    { "path": "/songs", "methods": ["GET"], "middlewares": ["anonymous"] },
+    {
+        "path": "/songs/search",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/songs/:id",
+        "methods": ["DELETE"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/songs/createSong",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/songs/editSong/:id",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "anonymous"]
+    },
+    {
+        "path": "/admin/login",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous"]
+    },
+    {
+        "path": "/admin/register",
+        "methods": ["POST"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/data/images",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/data/videos",
+        "methods": ["GET"],
+        "middlewares": ["anonymous"]
+    },
+    {
+        "path": "/upload",
+        "methods": ["POST"],
+        "middlewares": ["multerMiddleware", "anonymous"]
+    },
+    {
+        "path": "/user/signup",
+        "methods": ["POST"],
+        "middlewares": ["anonymous", "signup"]
+    },
+    {
+        "path": "/user/confirm/:token",
+        "methods": ["GET"],
+        "middlewares": ["confirmEmail"]
+    },
+    {
+        "path": "/user/email/resend/:token",
+        "methods": ["GET"],
+        "middlewares": ["resendconfirmation"]
+    },
+    {
+        "path": "/user/signin",
+        "methods": ["POST"],
+        "middlewares": ["signin"]
+    },
+    {
+        "path": "/loginWithGmail",
+        "methods": ["POST"],
+        "middlewares": ["loginWithGmail"]
+    },
+    {
+        "path": "/user/search/:searchkey",
+        "methods": ["GET"],
+        "middlewares": ["searchuser"]
+    }
+]
